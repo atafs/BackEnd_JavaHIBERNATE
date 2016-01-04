@@ -51,6 +51,6 @@
         <property name="hbm2ddl.auto">update</property>
  
         <!-- Names the annotated entity class -->
-        <mapping class="com.americoLIB.dao.UserDetails"/>
+        <mapping class="com.americoLIB.UserDetails"/>
     </session-factory>
 </hibernate-configuration>

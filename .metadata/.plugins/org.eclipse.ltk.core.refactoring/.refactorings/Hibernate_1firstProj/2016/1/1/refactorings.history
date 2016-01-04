@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;pass&apos; to &apos;Hibernate_1firstProj&apos;" description="Move &apos;pass&apos; to &apos;Hibernate_1firstProj&apos;" destination="/Hibernate_1firstProj" element1="/Hibernate_LIBRARIES/pass" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1451929352122" updateReferences="true"/>
+</session>
