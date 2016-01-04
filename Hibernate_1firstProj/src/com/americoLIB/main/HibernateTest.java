@@ -19,7 +19,7 @@ public class HibernateTest {
 		String userName = "UserName" + random;
 		user.setUserName(userName);
 		
-		//PRINT
+		//PRINT.
 		System.out.println("user_id = " + user.getUserId());
 		System.out.println("user_name = " + user.getUserName());
 		
