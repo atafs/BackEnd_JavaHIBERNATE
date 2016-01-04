@@ -1,4 +1,4 @@
-package com.americoLIB;
+package com.americoLIB.dao;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

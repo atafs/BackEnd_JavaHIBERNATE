@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.classic.Session;
 
-import com.americoLIB.UserDetails;
+import com.americoLIB.dao.UserDetails;
 
 public class HibernateTest {
 

@@ -1,3 +1,3 @@
-﻿--QUERY: CHECK TABLE FROM 
+--QUERY: CHECK TABLE FROM 
 SELECT * FROM userdetails 
 ;
