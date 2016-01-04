@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451928587764_1" label="Libraries" name="Libraries">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hibernate_LIBRARIES" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451928625465_2" label="firstProjectsBases_Hibernate" name="firstProjectsBases_Hibernate">
+<item elementID="=Hibernate_1firstProj" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451928574012_0" label="Window Working Set" name="Aggregate for window 1451928305322"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451928628230_3" label="Multiple Working Sets" name="Aggregate:firstProjectsBases_Hibernate:Libraries:">
+<workingSet IMemento.internal.id="firstProjectsBases_Hibernate"/>
+<workingSet IMemento.internal.id="Libraries"/>
+</workingSet>
+</workingSetManager>
