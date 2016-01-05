@@ -1,0 +1,5 @@
+<!-- Drop and re-create the database schema on startup -->
+<property name="hbm2ddl.auto">create</property>
+
+<!-- Adds to the list new values instead of drop it -->
+<property name="hbm2ddl.auto">update</property>

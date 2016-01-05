@@ -1,0 +1,67 @@
+package com.americoLIB.dao;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="USER_DETAILS")
+public class UserDetails {
+	
+	//ATTRIBUTES
+	private double userId;
+	private String userName;
+	private Date joinedDate;
+	private String Address;
+	private String description;
+	private static String group;
+	
+	//GETTERS AND SETTERS
+	@Id
+	@Column (name="USER_ID")
+	public double getUserId() {
+		return userId;
+	}
+	public void setUserId(double userId) {
+		this.userId = userId;
+	}
+	
+	@Column (name="USER_NAME")
+	public String getUserName() {
+		return userName + " => from GETTER";
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	public Date getJoinedDate() {
+		return joinedDate;
+	}
+	public void setJoinedDate(Date joinedDate) {
+		this.joinedDate = joinedDate;
+	}
+	
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public static String getGroup() {
+		return group;
+	}
+	public static void setGroup(String group) {
+		UserDetails.group = group;
+	}
+}

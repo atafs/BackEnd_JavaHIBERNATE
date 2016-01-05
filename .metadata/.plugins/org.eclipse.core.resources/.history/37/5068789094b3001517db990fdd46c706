@@ -1,0 +1,8 @@
+// ANNOTATION ##########################################
+
+//@Entity (name="USER_DETAILS")
+/* It will create a new TABLE with this name and put the data there. For example: */
+@Entity (name="USER_DETAILS")
+public class UserDetails {
+	
+	//ATTRIBUTES

@@ -1,0 +1,22 @@
+import javax.persistence.Id;
+
+// ANNOTATION HIBERNATE ##########################################
+
+//@Entity (name="USER_DETAILS")
+/* It will create a new TABLE with this name and put the data there. 
+   For example: 
+ */
+//...
+@Entity (name="USER_DETAILS")
+public class UserDetails {
+//...
+	
+// *****************************************************
+//@Id
+/* It will define the primary key of the TABLE 
+   For example: 
+ */
+//...
+@Id
+private double userId;
+//...

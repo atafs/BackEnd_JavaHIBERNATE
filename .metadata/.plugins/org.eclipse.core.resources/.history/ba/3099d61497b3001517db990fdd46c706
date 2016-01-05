@@ -1,0 +1,32 @@
+package com.americoLIB.dao;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity (name="USER_DETAILS")
+@Table 
+public class UserDetails {
+	
+	//ATTRIBUTES
+	private double userId;
+	private String userName;
+	
+	//GETTERS AND SETTERS
+	@Id
+	@Column (name="USER_ID")
+	public double getUserId() {
+		return userId;
+	}
+	public void setUserId(double userId) {
+		this.userId = userId;
+	}
+	
+	@Column (name="USER_NAME")
+	public String getUserName() {
+		return userName + " => from GETTER";
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+}

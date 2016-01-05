@@ -1,0 +1,24 @@
+// ANNOTATION HIBERNATE ##########################################
+
+//@Entity (name="USER_DETAILS")
+/* It will create a new TABLE with this name and put the data there. */
+//...
+@Entity (name="USER_DETAILS")
+public class UserDetails {
+//...
+	
+// *****************************************************
+//@Id
+/* It will define the primary key of the TABLE */
+//...
+@Id
+private double userId;
+//...
+
+//*****************************************************
+//@Annotation
+/* WHERE TO PUT IT:
+ - ATTRIBUTE: it will get the value of the attribute
+ - GETTER: it will get the value of the getter (can be different) 
+*/
+//...
