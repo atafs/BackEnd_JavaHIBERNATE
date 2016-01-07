@@ -1,0 +1,34 @@
+package com.americoLIB._v02mapping.main;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import com.americoLIB._v02mapping.dao.UserDetails;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//INSTANTIATE USER1 #############################
+		UserDetails user = new UserDetails();
+		
+		//POPULATE DATABASE *****************************
+		//ID RANDOM
+		int random = (int) (Math.random()*10000);
+
+		//NAME
+		String userName = "UserName" + random;
+		user.setUserName(userName);
+
+		//PUT DATA HIBERNATE
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		session.save(user);
+		session.getTransaction().commit();
+
+		//CLOSE
+		session.close();
+	}
+}

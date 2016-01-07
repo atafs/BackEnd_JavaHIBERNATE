@@ -1,0 +1,11 @@
+package com.americoLIB.dao;
+
+public class Address {
+	
+	//ATTRIBUTES
+	private String street;
+	private String city;
+	private String state;
+	private String pincode;
+
+}

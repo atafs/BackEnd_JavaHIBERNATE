@@ -1,0 +1,5 @@
+package com.americoLIB._v02mapping.dao;
+
+public class Vehicle {
+
+}

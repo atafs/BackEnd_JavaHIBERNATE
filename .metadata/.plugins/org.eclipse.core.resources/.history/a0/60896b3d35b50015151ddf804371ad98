@@ -1,0 +1,120 @@
+package com.americoLIB._v01begin.main;
+
+import java.util.Date;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import com.americoLIB._v01begin.dao.Address;
+import com.americoLIB._v01begin.dao.UserDetails;
+
+public class MainBegin {
+
+	public static void main(String[] args) {
+		
+		//INSTANTIATE USER1 #############################3
+		UserDetails user = new UserDetails();
+		
+		//POPULATE DATABASE
+		//ID
+		int random = (int) (Math.random()*10000);
+//		random = (double) Math.round(random);
+//		user.setUserId(random);
+		//NAME
+		String userName = "UserName" + random;
+		user.setUserName(userName);
+		//ADDRESS
+		user.setAddress("UserAddress" + random);
+		//JOINED_DATE
+		user.setJoinedDate(new Date());
+		//DESCRIPTION
+		user.setDescription("UserDescription" + random);
+		//GROUP (static: same to all)
+		UserDetails.setGroupUser("HibernateRULES");
+		//COLLECTION
+		Address address1 = new Address();
+		address1.setStreet("streetName1");
+		address1.setCity("cityName1");
+		address1.setState("stateName1");
+		address1.setPincode("pincodeName1");
+		
+		Address address2 = new Address();
+		address2.setStreet("streetName2");
+		address2.setCity("cityName2");
+		address2.setState("stateName2");
+		address2.setPincode("pincodeName2");
+		user.getListOfAddresses().add(address1);
+		user.getListOfAddresses().add(address2);
+		
+		//PRINT
+		System.out.println("-----------PRINT01--------------");
+		System.out.println("group_user = " + UserDetails.getGroupUser());
+		System.out.println("user_id = " + user.getUserId());
+		System.out.println("user_name = " + user.getUserName());
+		System.out.println("--------------------------------");
+		
+		//PUT DATA
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		session.save(user);
+		session.getTransaction().commit();
+
+		//CLOSE
+		session.close();
+		//CLEAN USER
+		user = null;
+		
+		//GET DATA
+		session = sessionFactory.openSession();
+//		session.beginTransaction();
+		
+		//LAZY FETCH HIBERNATE
+		user = (UserDetails)session.get(UserDetails.class, 55);
+		//CLOSE
+		session.close();
+		
+		//AVOID BEING NULL (first insert)
+		if (user.getListOfAddresses().size() == 0) {
+			System.out.println("FetchType.EAGER - ListOfAddresses = " + user.getListOfAddresses().size());
+
+		}
+		
+		//CLEAN USER
+		user = null;
+		
+		//INSTANTIATE USER2 #############################
+		UserDetails user2 = new UserDetails();
+		
+		//POPULATE DATABASE
+		//ID (automatic thanks to the annotation)
+		//NAME
+		String userName2 = "UserName" + random;
+		user2.setUserName(userName2);
+		//ADDRESS
+		user2.setAddress("UserAddress" + random);
+		//JOINED_DATE
+		user2.setJoinedDate(new Date());
+		//DESCRIPTION
+		user2.setDescription("UserDescription" + random);
+		//GROUP (static: same to all)
+		UserDetails.setGroupUser("HibernateRULES");
+		//ADDRESS SEPARETED
+		Address addressSeparated = new Address();
+		addressSeparated.setStreet("streetName");
+		addressSeparated.setCity("cityName");
+		addressSeparated.setState("stateName");
+		addressSeparated.setPincode("pincodeName");
+		user2.setAddressSeparated(addressSeparated);
+		
+		SessionFactory sessionFactory2 = new Configuration().configure().buildSessionFactory();
+		Session session2 = sessionFactory2.openSession();
+		session2.beginTransaction();
+		session2.save(user2);
+		session2.getTransaction().commit();
+		
+		//CLOSE
+		session2.close();	
+	}
+}

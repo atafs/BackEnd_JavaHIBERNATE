@@ -1,0 +1,10 @@
+package com.americoLIB._v02mapping.dao;
+
+public class Vehicle {
+	
+	//ATTRIBUTES
+	private int vehicleId;
+	private String vehicleName;
+	
+
+}
