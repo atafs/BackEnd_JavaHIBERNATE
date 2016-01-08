@@ -5,6 +5,16 @@ FROM user_details
 
 --QUERY: CHECK TABLE FROM 
 SELECT *
+FROM vehicle 
+;
+
+--QUERY: CHECK TABLE FROM 
+SELECT *
+FROM USER_DETAILS_Vehicle 
+;
+
+--QUERY: CHECK TABLE FROM 
+SELECT *
 FROM user_address
 ;
 

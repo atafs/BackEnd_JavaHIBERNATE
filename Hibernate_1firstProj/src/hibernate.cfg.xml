@@ -48,15 +48,19 @@
 
         <!-- Drop and re-create the database schema on startup -->
         <!-- <property name="hbm2ddl.auto">create</property> -->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
  
         <!-- Names the annotated entity class -->
         <!-- _v01begin -->
 <!--         <mapping class="com.americoLIB._v01begin.dao.UserDetails"/> -->
         
         <!-- _v02mapping -->
-        <mapping class="com.americoLIB._v02mapping.dao.UserDetails"/>
-        <mapping class="com.americoLIB._v02mapping.dao.Vehicle"/>
+<!--         <mapping class="com.americoLIB._v02mapping.dao.UserDetails"/>
+        <mapping class="com.americoLIB._v02mapping.dao.Vehicle"/> -->
+        
+        <!-- _v03many_to_many -->
+        <mapping class="com.americoLIB._v03many_to_many.dao.UserDetails"/>
+        <mapping class="com.americoLIB._v03many_to_many.dao.Vehicle"/>
         
     </session-factory>
 </hibernate-configuration>
